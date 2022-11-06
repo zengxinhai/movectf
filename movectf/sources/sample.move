@@ -1,4 +1,4 @@
-module ctfone::solution {
+module ctf_question_one::solution {
   use sui::tx_context::{TxContext};
   use game::hero::{Self, Hero};
   use game::adventure::{slay_boar, slay_boar_king};

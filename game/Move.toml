@@ -1,11 +1,11 @@
 [package]
-name = "ctfone21"
-version = "0.0.6"
+name = "ctf"
+version = "0.0.1"
 
 [dependencies]
 Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
-ctf = { local = "../game" }
 
 [addresses]
-ctf_question_one =  "0x0"
+ctf = "0xce94063b42af5e24de3dd471dbf620202a65067d"
+game = "0xce94063b42af5e24de3dd471dbf620202a65067d"
 sui =  "0000000000000000000000000000000000000002"
