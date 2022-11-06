@@ -1,10 +1,11 @@
 [package]
-name = "movectf"
+name = "ctfone4"
 version = "0.0.1"
 
 [dependencies]
 Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
+ctf = { local = "/Users/icefox/Workspace/movectf-6" }
 
 [addresses]
-movectf =  "0x0"
+ctfone =  "0x0"
 sui =  "0000000000000000000000000000000000000002"

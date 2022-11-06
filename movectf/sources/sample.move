@@ -1,17 +1,23 @@
-module movectf::sample {
-  use sui::event;
-  use sui::tx_context::{Self, TxContext};
+module ctfone::solution {
+  use sui::tx_context::{TxContext};
+  use game::hero::{Self, Hero};
+  use game::adventure::{slay_boar, slay_boar_king};
 
-  struct Flag has copy, drop {
-    user: address,
-    flag: bool
+  fun farmToLevel2(hero: &mut Hero, ctx: &mut TxContext) {
+    while (hero::experience(hero) < 100) {
+      slay_boar(hero, ctx);
+    };
+    hero::level_up(hero);
   }
 
-  // The player needs to call get_flag() and trigger a Flag event to win.
-  public entry fun get_flag(ctx: &mut TxContext) {
-    event::emit(Flag {
-      user: tx_context::sender(ctx),
-      flag: true
-    })
+  fun farmKingTillEnd(hero: &mut Hero, ctx: &mut TxContext) {
+    while (hero::stamina(hero) > 0) {
+      slay_boar_king(hero, ctx);
+    }
+  }
+
+  public entry fun farm_box(hero: &mut Hero, ctx: &mut TxContext) {
+    farmToLevel2(hero, ctx);
+    farmKingTillEnd(hero, ctx);
   }
 }

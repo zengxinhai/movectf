@@ -4,7 +4,8 @@
   "description": "sui client publish --path <pkg_path> --gas-budget 30000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "publish": "sui client publish --path movectf/ --gas-budget 30000",
+    "trigger": "ts-node typescript/call_module.ts"
   },
   "author": "",
   "license": "ISC",
