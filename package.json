@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "publish": "sui client publish --path movectf/ --gas-budget 30000",
-    "trigger": "ts-node typescript/call_module.ts",
+    "battle": "ts-node typescript/battle.ts",
     "list": "sui client objects --address 0x8004e754d011ad38d41d7548f5faaaf3789c1838"
   },
   "author": "",
