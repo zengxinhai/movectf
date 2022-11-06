@@ -1,6 +1,6 @@
 [package]
-name = "ctfone13"
-version = "0.0.1"
+name = "ctfone21"
+version = "0.0.6"
 
 [dependencies]
 Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
