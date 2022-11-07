@@ -8,6 +8,7 @@
     "battle": "ts-node typescript/battle.ts",
     "flash": "ts-node typescript/flashloan.ts",
     "lock": "ts-node typescript/lock.ts",
+    "check": "ts-node typescript/checkin.ts",
     "list": "sui client objects --address 0x8004e754d011ad38d41d7548f5faaaf3789c1838"
   },
   "author": "",
