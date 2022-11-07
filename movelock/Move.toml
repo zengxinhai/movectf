@@ -1,0 +1,10 @@
+[package]
+name = "move_lock"
+version = "0.0.1"
+
+[dependencies]
+Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
+
+[addresses]
+movectf = "0x7c981f818e0eaf6da686ae80e1d0654d8423e944"
+sui =  "0000000000000000000000000000000000000002"

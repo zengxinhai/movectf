@@ -1,0 +1,11 @@
+[package]
+name = "lock_solution"
+version = "0.0.1"
+
+[dependencies]
+Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
+move_lock = { local = "../movelock" }
+
+[addresses]
+lock_solution =  "0x0"
+sui =  "0000000000000000000000000000000000000002"
