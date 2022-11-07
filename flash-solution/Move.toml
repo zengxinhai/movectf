@@ -1,0 +1,11 @@
+[package]
+name = "flashloan_solution"
+version = "0.0.3"
+
+[dependencies]
+Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
+flash = { local = "../flashloan" }
+
+[addresses]
+flashloan_solution =  "0x0"
+sui =  "0000000000000000000000000000000000000002"
