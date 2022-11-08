@@ -1,16 +1,16 @@
 import { signer } from "./common";
-const heroId = '0xd675d36a9cf8f16d9d46c90db3bbb63dced6afa2';
-const solutionId = '0x21b2185353a1545639e2dc6ae2a933a6d416da09';
+const heroId = '0x23c615341a87e94ff9f63670ba2b5ed9f944defd';
+const solutionId = '0xee4e0f2d5368c02c5f532e7051f70921cc8e320e';
 
-const boxId = '0x0b60d1c0aacb81dd16db7bf955023baad976f6f0';
+const boxId = '0x2f78fe0e0f32381b2b1e4975156be410d830f177';
 
 const farmBox = async () => {
   const moveCallTxn = await signer.executeMoveCallWithRequestType({
     packageObjectId: solutionId,
-    module: 'solution',
+    module: 'game',
     function: 'farmForBox',
     typeArguments: [],
-    arguments: [heroId],
+    arguments: [heroId, 5],
     gasBudget: 1000000,
   });
   console.log('moveCallTxn', moveCallTxn);
@@ -18,7 +18,7 @@ const farmBox = async () => {
 const openBox = async () => {
   const moveCallTxn = await signer.executeMoveCallWithRequestType({
     packageObjectId: solutionId,
-    module: 'solution',
+    module: 'game',
     function: 'openBox',
     typeArguments: [],
     arguments: [boxId],

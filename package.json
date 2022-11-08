@@ -4,11 +4,12 @@
   "description": "sui client publish --path <pkg_path> --gas-budget 30000",
   "main": "index.js",
   "scripts": {
-    "publish": "sui client publish --path lock-solution/ --gas-budget 30000",
+    "publish": "sui client publish --path movectf/ --gas-budget 30000",
     "battle": "ts-node typescript/battle.ts",
     "flash": "ts-node typescript/flashloan.ts",
     "lock": "ts-node typescript/lock.ts",
     "check": "ts-node typescript/checkin.ts",
+    "faucet": "ts-node typescript/faucet.ts",
     "list": "sui client objects --address 0x8004e754d011ad38d41d7548f5faaaf3789c1838"
   },
   "author": "",
@@ -19,7 +20,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@mysten/sui.js": "^0.15.0",
+    "@mysten/sui.js": "^0.0.0-experimental-20221103194143",
     "aptos": "^1.3.16"
   }
 }

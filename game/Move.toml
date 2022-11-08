@@ -6,6 +6,6 @@ version = "0.0.1"
 Sui = { local = "/Users/icefox/Workspace/sui/crates/sui-framework" }
 
 [addresses]
-ctf = "0xce94063b42af5e24de3dd471dbf620202a65067d"
-game = "0xce94063b42af5e24de3dd471dbf620202a65067d"
+ctf = "0xd91618121dbe6a092341b8f56830d0ee2b53b065"
+game = "0xd91618121dbe6a092341b8f56830d0ee2b53b065"
 sui =  "0000000000000000000000000000000000000002"

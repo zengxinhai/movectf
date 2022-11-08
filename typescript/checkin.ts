@@ -1,14 +1,16 @@
-import { signer } from "./common";
-const pkgId = '0x825b48ffb829418e335a7e6e7549e9dfc371af99';
+import { signer, provider } from "./common";
+const pkgId = process.env.pkg_id;
 
 const getFlag = async () => {
+  // const address = await signer.getAddress();
+  // await provider.requestSuiFromFaucet(address);
   const moveCallTxn = await signer.executeMoveCallWithRequestType({
     packageObjectId: pkgId,
     module: 'checkin',
     function: 'get_flag',
     typeArguments: [],
     arguments: [],
-    gasBudget: 1000000,
+    gasBudget: 10000,
   });
   console.log('moveCallTxn', moveCallTxn);
 }
