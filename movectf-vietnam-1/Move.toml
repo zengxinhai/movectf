@@ -1,0 +1,11 @@
+[package]
+name = "lucky_number"
+version = "0.0.1"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework", rev = "devnet" }
+
+[addresses]
+std = "0x1"
+movectf =  "0x5f8d5adc962c714aba26c6f05aa38a4f77c04ab8"
+sui =  "0000000000000000000000000000000000000002"

@@ -1,0 +1,11 @@
+[package]
+name="MovectfCheckin"
+version="0.0.1"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework", rev = "devnet" }
+lucky_number = { local = "../movectf-vietnam-1" }
+
+[addresses]
+movectf_checkin="0x0"
+sui="0x2"

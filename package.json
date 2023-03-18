@@ -4,13 +4,17 @@
   "description": "sui client publish --path <pkg_path> --gas-budget 30000",
   "main": "index.js",
   "scripts": {
-    "publish": "sui client publish --path movectf/ --gas-budget 30000",
-    "battle": "ts-node typescript/battle.ts",
-    "flash": "ts-node typescript/flashloan.ts",
-    "lock": "ts-node typescript/lock.ts",
-    "check": "ts-node typescript/checkin.ts",
+    "publish_checkin": "sui client publish movectf_checkin --gas-budget 30000 --skip-dependency-verification --skip-fetch-latest-git-deps",
+    "submit_checkin": "ts-node movectf_checkin/submit.ts",
+    "publish_answer1": "sui client publish movectf_answer1 --gas-budget 30000 --skip-dependency-verification --skip-fetch-latest-git-deps",
+    "submit_answer1": "ts-node movectf_answer1/submit.ts",
+    "publish_answer2": "sui client publish movectf_answer2 --gas-budget 30000 --skip-dependency-verification --skip-fetch-latest-git-deps",
+    "submit_answer2": "ts-node movectf_answer2/submit.ts",
+    "publish_answer3": "sui client publish movectf_answer3 --gas-budget 30000 --skip-dependency-verification --skip-fetch-latest-git-deps",
+    "submit_answer3": "ts-node movectf_answer3/submit.ts",
+    "list": "sui client objects --address 0x8004e754d011ad38d41d7548f5faaaf3789c1838",
     "faucet": "ts-node typescript/faucet.ts",
-    "list": "sui client objects --address 0x8004e754d011ad38d41d7548f5faaaf3789c1838"
+    "balance": "ts-node typescript/balance.ts"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +24,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@mysten/sui.js": "^0.0.0-experimental-20221103194143",
-    "aptos": "^1.3.16"
+    "@mysten/sui.js": "^0.29.1"
   }
 }
